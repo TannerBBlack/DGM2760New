@@ -1,31 +1,19 @@
-let message = document.querySelector('#feedback');
+function duplicateMenu() {
+    let topList = document.querySelectorAll('ul#primaryNavigation li a')
 
-const pizza = {
-    crust: 'thin',
-    size: 'small',
-    topping: 'pineapple',
-    buildPizza: function () {
-        message = `Baking a ${pizza.size} pizza on a ${pizza.crust} crust with a ${pizza.topping} topping and cheese just for you.`
-        document.querySelector('#feedback').textContent = message
-    },
-    shoppingList: () => {
-        let flour = 1
-        if (pizza.crust === 'thick') flour *= 2
-        if (pizza.size === 'large') flour *= 2
+    let newList = document.createElement('ul')
 
-        message = `You will need to purchase ${flour} cups of flour and 1 lb of ${pizza.topping}.`
-        document.querySelector('#feedback').textContent = message
-    }
+    topList.forEach(menuItem => {
+        let  newLI = document.createElement('li')
+        let newLink = document.createElement('a')
+        newLink.textContent = menuItem.textContent;
+        newLink.setAttribute('href', menuItem.getAttribute('href'))
+        newLI.setAttribute('li', menuItem.getAttribute('li'))
+        document.querySelector('#smallNavArea').appendChild(newList)
+        newList.appendChild(newLI)
+        newLI.appendChild(newLink)
+        
+    })
 }
 
-document.querySelector('#thin').addEventListener('click', () => pizza.crust = 'thin')
-document.querySelector('#thick').addEventListener('click', () => pizza.crust = 'thick')
-
-document.querySelector('#small').addEventListener('click', () => pizza.size = 'small')
-document.querySelector('#large').addEventListener('click', () => pizza.size = 'large')
-
-document.querySelector('#pepperoni').addEventListener('click', () => pizza.topping = 'pepperoni')
-document.querySelector('#pineapple').addEventListener('click', () => pizza.topping = 'pineapple')
-
-document.querySelector('#build').addEventListener('click', pizza.buildPizza)
-document.querySelector('#shopping').addEventListener('click', pizza.shoppingList)
+duplicateMenu()
