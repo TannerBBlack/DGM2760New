@@ -1,31 +1,29 @@
-let message = document.querySelector('#feedback');
-
-const pizza = {
-    crust: 'thin',
-    size: 'small',
-    topping: 'pineapple',
-    buildPizza: function () {
-        message = `Baking a ${pizza.size} pizza on a ${pizza.crust} crust with a ${pizza.topping} topping and cheese just for you.`
-        document.querySelector('#feedback').textContent = message
+const question = {
+    stem: "Who is buried in Grant's Tomb?",
+    option1: "Tom",
+    option2: "Grant",
+    option3: "Jerry",
+    option4: "Billy Bob Antonio George III",
+    correct: 2,
+    display: () => {
+        document.querySelector('#stem').textContent = question.stem
+        document.querySelector('#answer1').textContent = question.option1
+        document.querySelector('#answer2').textContent = question.option2
+        document.querySelector('#answer3').textContent = question.option3
+        document.querySelector('#answer4').textContent = question.option4
     },
-    shoppingList: () => {
-        let flour = 1
-        if (pizza.crust === 'thick') flour *= 2
-        if (pizza.size === 'large') flour *= 2
-
-        message = `You will need to purchase ${flour} cups of flour and 1 lb of ${pizza.topping}.`
-        document.querySelector('#feedback').textContent = message
+    check: (userChoice) => {
+        if (userChoice === question.correct) {
+            document.querySelector('.feedback').textContent = "You are Correct!"
+        } else {
+            document.querySelector('.feedback').textContent = "Wrong, try again"
+        }
     }
 }
 
-document.querySelector('#thin').addEventListener('click', () => pizza.crust = 'thin')
-document.querySelector('#thick').addEventListener('click', () => pizza.crust = 'thick')
+document.querySelector('#answer1').addEventListener('click', () => question.check(1))
+document.querySelector('#answer2').addEventListener('click', () => question.check(2))
+document.querySelector('#answer3').addEventListener('click', () => question.check(3))
+document.querySelector('#answer4').addEventListener('click', () => question.check(4))
 
-document.querySelector('#small').addEventListener('click', () => pizza.size = 'small')
-document.querySelector('#large').addEventListener('click', () => pizza.size = 'large')
-
-document.querySelector('#pepperoni').addEventListener('click', () => pizza.topping = 'pepperoni')
-document.querySelector('#pineapple').addEventListener('click', () => pizza.topping = 'pineapple')
-
-document.querySelector('#build').addEventListener('click', pizza.buildPizza)
-document.querySelector('#shopping').addEventListener('click', pizza.shoppingList)
+question.display()

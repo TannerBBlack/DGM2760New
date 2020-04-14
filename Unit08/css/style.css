@@ -1,7 +1,7 @@
 header {
     max-width: 940px;
     margin: 0;
-    background-image: url("../images/pizza.jpg");
+    background-image: url("../images/Grants-tomb-3-640x280.jpg");
     background-size: 940px 300px;
     height: 300px;
     text-shadow: 2px 1px 5px black;
@@ -10,11 +10,6 @@ header {
 body {
     max-width: 940px;
     margin: 0 auto;
-}
-
-main {
-    /* display: flex;
-    justify-content: space-between; */
 }
 
 header h1 {
