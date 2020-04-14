@@ -1,0 +1,38 @@
+header {
+    max-width: 940px;
+    margin: 0;
+    background-image: url("");
+    background-size: 940px 300px;
+    height: 300px;
+    text-shadow: 2px 1px 5px black;
+}
+
+body {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+header h1 {
+    color: white;
+}
+
+header h2 {
+    color: white;
+}
+
+main h2 {
+    color: teal;
+}
+
+aside {
+    max-width: 200px;
+}
+
+span {
+    color: red;
+    background-color: rgb(248, 197, 197);
+}
+
+footer {
+    background-color: teal;
+}

@@ -1,0 +1,28 @@
+{
+    "hotels": [
+        {
+            "name": "Marriott",
+            "rooms": "50",
+            "gym": "Yes",
+            "roomTypes": ["King", "Queen", "Double"],
+            "address": "258 Broad Street",
+            "picture": "room1.jpeg"
+        },
+        {
+            "name": "Sheridon",
+            "rooms": "72",
+            "gym": "No",
+            "roomTypes": ["Queen", "Double"],
+            "address": "12 Coolio Street",
+            "picture": "room2.jpeg"
+        },
+        {
+            "name": "Timpton",
+            "rooms": "500",
+            "gym": "Yes",
+            "roomTypes": ["King", "Queen", "Double"],
+            "address": "1290 Suite Street",
+            "picture": "room3.jpeg"
+        }
+    ]
+}
