@@ -1,0 +1,29 @@
+header {
+    max-width: 550px;
+    margin: 0;
+    background-image: url("../Images/bordeaux-cosy-b-b.jpg");
+    height: 300px;
+}
+
+body {
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: palegoldenrod;
+}
+
+
+header h1 {
+    color: white;
+}
+
+header h2 {
+    color: white;
+}
+
+h2 {
+    background-color: teal;
+}
+
+footer {
+    background-color: teal;
+}

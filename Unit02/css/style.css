@@ -1,0 +1,28 @@
+header {
+    max-width: 940px;
+    margin: 0;
+    background-image: url("../img/screen-shot-2019-01-14-at-34223-pm.png");
+    height: 300px;
+}
+
+body {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+
+header h1 {
+    color: white;
+}
+
+header h2 {
+    color: white;
+}
+
+main h2 {
+    background-color: teal;
+}
+
+footer {
+    background-color: teal;
+}
