@@ -6,7 +6,7 @@
             "gym": "Yes",
             "roomTypes": ["King", "Queen", "Double"],
             "address": "258 Broad Street",
-            "picture": "room1.jpeg"
+            "picture": "room1.jpg"
         },
         {
             "name": "Sheridon",
@@ -14,7 +14,7 @@
             "gym": "No",
             "roomTypes": ["Queen", "Double"],
             "address": "12 Coolio Street",
-            "picture": "room2.jpeg"
+            "picture": "room2.jpg"
         },
         {
             "name": "Timpton",
@@ -22,7 +22,7 @@
             "gym": "Yes",
             "roomTypes": ["King", "Queen", "Double"],
             "address": "1290 Suite Street",
-            "picture": "room3.jpeg"
+            "picture": "room3.jpg"
         }
     ]
 }
